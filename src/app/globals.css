@@ -1,4 +1,23 @@
-@import "tailwindcss";
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+table {
+    border-collapse: collapse;
+}
+
+
+.table-fix-head {
+    height: 100px;
+}
+
+.table-fix-head thead th {
+    position: sticky;
+    top: 0;
+}
+
+.list-group-item-light {
+    background-color: aliceblue;
+}
 
 @theme {
   --font-sans: var(--font-geist-sans);
