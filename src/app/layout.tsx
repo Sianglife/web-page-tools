@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Nav />
-        <main style={{ height: 'calc(100vh - 11em)' }}>
+        <main className="mx-1 my-3" style={{ height: 'calc(100vh - 4em)' }}>
           {children}
         </main>
         <Footer />
