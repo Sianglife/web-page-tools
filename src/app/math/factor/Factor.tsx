@@ -4,8 +4,8 @@ import { useState } from 'react';
 function getAllFactors(n: number) {
     let result = [];
     for (let i = 1; i <= n; i++) {
-        if (Number.isInteger(n / n)) {
-            result.push(n);
+        if (Number.isInteger(n / i)) {
+            result.push(i);
         }
     }
     return result;
