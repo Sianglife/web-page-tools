@@ -28,8 +28,13 @@ export default function Nav() {
                 <div className="collapse navbar-collapse p-2 rounded" id="navcol-1"
                     style={{ backgroundColor: "rgb(89,154,143)", height: "100%" }}>
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item" />
-                        <li className="nav-item" />
+                        <li className="nav-item">
+                            <Link href="/math/random" prefetch={false} className="nav-link">
+                                <Icon.GearFill />
+                                <span className="ps-2">抽籤</span>
+                            </Link>
+
+                        </li>
                     </ul>
                 </div>
             </div>
