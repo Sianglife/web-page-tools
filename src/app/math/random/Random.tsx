@@ -50,6 +50,11 @@ export default function MathRandom() {
         }
 
         if (allowRepeat) {
+            tmpResult = [];
+            for (let i = 0; i < count; i++) {
+                tmpResult.push(tmpCandidate[Math.floor(Math.random() * tmpCandidate.length)]);
+            }
+            setResult(tmpResult);
 
         } else {
             // VAILD: count > candidate.length
