@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import * as Icon from 'react-bootstrap-icons';
 
 export default function Nav() {
@@ -33,7 +32,7 @@ export default function Nav() {
                                 <Icon.ArchiveFill />
                                 <span className="ps-2">抽籤</span>
                             </Link>
-                        </li>
+                        </li>                        
                         <li className="nav-item">
                             <Link href="/math/factor" prefetch={false} className="nav-link">
                                 <Icon.ListOl />
