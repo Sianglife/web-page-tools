@@ -16,8 +16,6 @@ export default function MathRandom() {
         setAlert(['', '']);
     }
 
-    function checkCount() { }
-
     function updateCandidate() {
         clearAlert();
         if (max === '' || min === '') {
