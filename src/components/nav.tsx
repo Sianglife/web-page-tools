@@ -30,10 +30,15 @@ export default function Nav() {
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
                             <Link href="/math/random" prefetch={false} className="nav-link">
-                                <Icon.GearFill />
+                                <Icon.ArchiveFill />
                                 <span className="ps-2">抽籤</span>
                             </Link>
-
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/math/factor" prefetch={false} className="nav-link">
+                                <Icon.ListOl />
+                                <span className="ps-2">質因數</span>
+                            </Link>
                         </li>
                     </ul>
                 </div>
