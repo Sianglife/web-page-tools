@@ -160,13 +160,23 @@ export default function MathRandom() {
                     {
                         candidate.map((item, index) => (
                             <li className="list-group-item d-xxl-flex align-items-xxl-center" key={index} >
-                                <div className="form-check" >
-                                    <input className="form-check-input" type="checkbox" checked={!item.disabled} id={`flexCheckDefault${index}`} onChange={() => setCandidate((prev) => {
+                                <div className="form-check d-flex align-items-center w-100 mb-0" >
+                                    <input className="form-check-input mt-0 me-2" type="checkbox" checked={!item.disabled} id={`flexCheckDefault${index}`} onChange={() => setCandidate((prev) => {
                                         let new_candidate = [...prev];
                                         new_candidate[index] = { ...new_candidate[index], disabled: !new_candidate[index].disabled };
                                         return new_candidate;
                                     })} />
-                                    <label className="form-label form-check-label">{item.name}</label>
+                                    <input
+                                        type="text"
+                                        className={`form-control form-control-sm p-0 m-0 ${item.disabled ? 'text-decoration-line-through text-muted' : ''}`}
+                                        value={item.name}
+                                        onChange={(e) => setCandidate((prev) => {
+                                            let new_candidate = [...prev];
+                                            new_candidate[index] = { ...new_candidate[index], name: e.target.value };
+                                            return new_candidate;
+                                        })}
+                                        style={{ border: 'none', backgroundColor: 'transparent', boxShadow: 'none', fontSize: 'inherit' }}
+                                    />
                                 </div>
                             </li>
                         ))}
