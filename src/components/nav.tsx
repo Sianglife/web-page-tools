@@ -1,14 +1,17 @@
+"use client";
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import * as Icon from 'react-bootstrap-icons';
 
 export default function Nav() {
+    const pathname = usePathname();
     return (
         <nav
             className="navbar navbar-expand-md sticky-top navigation-clean-button navbar-dark p-2"
             style={{ height: "4em", backgroundColor: "rgb(89,154,143)" }}
         >
             <div className="container">
-                <Link href="/" prefetch={false} className="navbar-brand" >
+                <Link href="/" prefetch={false} className={`navbar-brand ${pathname === '/' ? 'active' : ''}`} >
                     <Icon.Tools />
                     <span className="ps-2">飛翔小工具</span>
                 </Link>
@@ -28,13 +31,13 @@ export default function Nav() {
                     style={{ backgroundColor: "rgb(89,154,143)", height: "100%" }}>
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link href="/math/random" prefetch={false} className="nav-link">
+                            <Link href="/random" prefetch={false} className={`nav-link ${pathname.startsWith('/random') ? 'active' : ''}`}>
                                 <Icon.ArchiveFill />
                                 <span className="ps-2">抽籤</span>
                             </Link>
-                        </li>                        
+                        </li>
                         <li className="nav-item">
-                            <Link href="/math/factor" prefetch={false} className="nav-link">
+                            <Link href="/math/factor" prefetch={false} className={`nav-link ${pathname.startsWith('/math/factor') ? 'active' : ''}`}>
                                 <Icon.ListOl />
                                 <span className="ps-2">質因數</span>
                             </Link>
