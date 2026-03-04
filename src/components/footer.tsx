@@ -6,7 +6,7 @@ export default function Footer() {
                 <div className="row row-cols-1 row-cols-lg-3">
                     <div className="col">
                         <p className="my-2" style={{ color: "#f8f9fa" }}>
-                            Copyright&nbsp;© 2024 Sianglife
+                            Copyright&nbsp;© 2026 Sianglife
                         </p>
                     </div>
                     <div className="col-lg-4 offset-lg-4">
