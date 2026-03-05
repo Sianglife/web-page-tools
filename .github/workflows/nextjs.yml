@@ -33,13 +33,18 @@ jobs:
           cache: "pnpm"
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
+        with:
+          static_site_generator: nextjs
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build with Next.js
         run: pnpm build
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
