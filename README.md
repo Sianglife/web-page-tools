@@ -1,4 +1,7 @@
 # 飛翔工具箱 WebPageTools
+"""
+此 Repo 已於 2026/04/16 封存，飛翔的第一個 Repo 下臺一鞠躬
+"""
 ### 全新介面，乾淨俐落，操作順暢，飛翔Style永傳承
 ![](https://i.imgur.com/etmIv1d.png)
 
